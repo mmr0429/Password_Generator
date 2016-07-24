@@ -1,7 +1,12 @@
 import time
+import sys
 from random import randint
 print ("Password generator v1\nHow long Your password should be ?")
-hl=int(input(":"))
+try:
+	hl=int(input(":"))
+except:
+	print("Error, pleasu run program again ...")
+	sys.exit(0)
 x=1
 random_nums = ["0"] * hl
 password_array = ["error"] * hl
@@ -19,5 +24,5 @@ while x < (hl+1) :
 for z in range (1,11):
 #	time.sleep(0.2)
 	print("%",end="")
-"""	
+"""
 print ("Your password is: ",password)
